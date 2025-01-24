@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "c438fb00-a731-4d92-9073-ea51cdfa2b51",
+		"name": "Project_WDAI_Web_Shop",
+		"description": "Dokumentacja opisująca operacje CRUD, z których korzysta moja strona internetowa przy łączeniu się z bazą danych.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40417622"
+	},
+	"item": [
+		{
+			"name": "Get single product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"product",
+						"1"
+					]
+				},
+				"description": "This request return data of single product from database using /product/:id_of_product"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all products to see in shop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"shop"
+					]
+				},
+				"description": "This request return all of the items in database to see all of them in a shop."
+			},
+			"response": []
+		},
+		{
+			"name": "Search for product with specific name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/search/F",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"search",
+						"F"
+					]
+				},
+				"description": "This request return all of items that title is like '%{searched_value}%' where '%' is 0 or more signs."
+			},
+			"response": []
+		},
+		{
+			"name": "Logining in",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/user/Szymek/2137",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"user",
+						"Szymek",
+						"2137"
+					]
+				},
+				"description": "This request return if specific user is in database and if password provided from user is the same as in database."
+			},
+			"response": []
+		},
+		{
+			"name": "Registering new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"Bybye\",\r\n    \"password\":\"Nanana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"register"
+					]
+				},
+				"description": "This request add new user to database with login and password from user."
+			},
+			"response": []
+		}
+	]
+}
