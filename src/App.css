@@ -1,0 +1,11 @@
+.background {
+    background-image: url(./main_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 150vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    z-index: -1
+  }

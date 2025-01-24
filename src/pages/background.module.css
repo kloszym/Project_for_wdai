@@ -1,0 +1,9 @@
+.background {
+    background-image: url(./main_background.jpg);
+    background-size: cover;
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
